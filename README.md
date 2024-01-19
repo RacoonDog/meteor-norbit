@@ -1,8 +1,4 @@
-# Meteor Addon Template
+# Meteor Norbit
 
-A template to allow easy usage of the Meteor Addon API.
+A simple Meteor Client addon to replace the default [orbit event bus](https://github.com/MeteorDevelopment/orbit) with [norbit's implementation](https://github.com/CrosbyDev/norbit).
 
-### How to use:  
-- Clone this project
-- Use this template to create new modules/commands
-- Run the mod with Meteor.

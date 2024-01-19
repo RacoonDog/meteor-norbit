@@ -1,27 +1,30 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "meteor-norbit",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "name": "Meteor Norbit",
+  "description": "Meteor Client addon to replace the event bus with norbit's implementation.",
   "authors": [
-    "seasnail"
+    "Crosby"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/RacoonDog/meteor-norbit",
+    "sources": "https://github.com/RacoonDog/meteor-norbit",
+    "issues": "https://github.com/RacoonDog/meteor-norbit/issues",
+    "discord": "https://discord.gg/4RBmBCFSTc"
   },
-  "icon": "assets/template/icon.png",
+  "license": "MIT",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "io.github.racoondog.meteornorbit.MeteorNorbit"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "meteor-norbit.mixins.json"
   ],
   "custom": {
-    "meteor-client:color": "225,25,25"
+    "meteor-client:color": "249,181,172"
   },
   "depends": {
     "java": ">=17",
