@@ -1,5 +1,6 @@
 package io.github.racoondog.meteornorbit.mixin;
 
+import io.github.racoondog.meteornorbit.MeteorNorbit;
 import io.github.racoondog.norbit.EventBus;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.orbit.IEventBus;
@@ -12,5 +13,5 @@ import org.spongepowered.asm.mixin.Shadow;
 @Mixin(value = MeteorClient.class, remap = false)
 public abstract class MeteorClientMixin {
     @SuppressWarnings({"ShadowModifiers", "unused"})
-    @Shadow public static final IEventBus EVENT_BUS = EventBus.threadSafe();
+    @Shadow public static final IEventBus EVENT_BUS = MeteorNorbit.safeThread() ? EventBus.threadSafe() : EventBus.threadUnsafe();
 }
